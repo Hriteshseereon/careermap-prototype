@@ -15,7 +15,7 @@ const LockedOverlay = ({ title, description }: LockedOverlayProps) => {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="flex flex-col items-center justify-center p-8 text-center gap-5"
+      className="flex flex-col items-center justify-center p-8 text-center gap-5 w-full"
     >
       <div className="w-20 h-20 rounded-2xl bg-primary/8 flex items-center justify-center mb-1">
         <Lock className="w-9 h-9 text-primary/60" strokeWidth={1.5} />
