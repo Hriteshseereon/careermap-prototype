@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 20% 98%;
+    --foreground: 0 5% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 5% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 5% 15%;
+
+    --primary: 3 60% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 38 55% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 15% 93%;
+    --muted-foreground: 0 5% 45%;
+
+    --accent: 174 42% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 12% 89%;
+    --input: 30 12% 89%;
+    --ring: 3 60% 39%;
+
+    --radius: 0.875rem;
+
+    --career-blue: 215 70% 50%;
+    --career-pink: 340 60% 55%;
+    --career-orange: 25 85% 55%;
+    --career-green: 152 55% 42%;
+    --career-purple: 265 55% 55%;
+    --career-yellow: 42 85% 55%;
+
+    --gold: 38 65% 52%;
+    --beige: 35 30% 92%;
+    --teal: 174 42% 42%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Nunito', sans-serif;
+  }
+  .font-body {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+@layer components {
+  .card-elevated {
+    @apply bg-card rounded-2xl border border-border shadow-sm;
+    box-shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.04), 0 4px 12px -2px hsl(0 0% 0% / 0.06);
+  }
+  .card-elevated-lg {
+    @apply bg-card rounded-2xl border border-border;
+    box-shadow: 0 2px 8px 0 hsl(0 0% 0% / 0.06), 0 8px 24px -4px hsl(0 0% 0% / 0.08);
+  }
+  .input-field {
+    @apply w-full h-12 px-4 rounded-xl border border-border bg-card text-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200;
+  }
+  .section-title {
+    @apply text-sm font-bold font-display text-foreground tracking-wide uppercase;
+    letter-spacing: 0.04em;
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
